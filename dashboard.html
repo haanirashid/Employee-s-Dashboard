@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="dash">
+        <div class="nav">
+            <h1>Dashboard</h1>
+        </div>
+        <div id="dashboard_intro" class="intro"></div>
+        <div class="main_dash">
+            <div class="left">
+                <div class="side_button"><button>Dashboard</button></div>
+                <div class="side_button"><button>Profile</button></div>
+                <div class="side_button"><button>Statistics</button></div>
+                <div class="side_button"><button>Products</button></div>
+                <div class="side_button"><button>Stock</button></div>
+                <div class="side_button"><button onclick="signinDirect()">SignOut</button></div>
+            </div>
+            <div class="right" id="dashboard_target">
+                <div class="header">
+                    <div class="sub_head index"><h2>Serial Number</h2></div>
+                    <div class="sub_head name"><h2>Name</h2></div>
+                    <div class="sub_head status"><h2>Status</h2></div>
+                    <div class="sub_head delete"><h2>Phone Number</h2></div>
+                    <div class="sub_head edit"><h2>View Profile</h2></div>
+                </div>
+                <!-- <div class="user_detail">
+                    <div class="sub_user"><h2>01S </h2></div>
+                    <div class="sub_user"><h2>SSHani Rashid</h2></div>
+                    <div class="sub_user"><h2 class="employee">SSEmployee</h2></div>
+                    <div class="sub_user"><h2>SS16161616</h2></div>
+                    <div class="sub_user"><button>SSEdit</button></div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <!-- <script src="app.js"></script> -->
+    <script>
+        //Dashboard element
+        var dashboardIntro = document.getElementById("dashboard_intro");
+        var dashboardTarget = document.getElementById("dashboard_target");
+
+
+        //Getting loggged User Name for Print on Dashboard
+        var getLoggedUserName = localStorage.getItem("LoggedUserName");
+        console.log("getLoggedUserName", getLoggedUserName);
+
+        //printing Welcome on dashboard
+        dashboardIntro.innerHTML += `<h1>Welcome, ${getLoggedUserName}!</h1>`
+
+        //Getting mainArr from local storage to print on dashboard
+        var getMainArr = JSON.parse(localStorage.getItem("mainArr"));
+        console.log("Main arr in print Fuction", getMainArr);
+
+        for (var i = 0; i < getMainArr.length; i++) {
+            console.log("printing data on dashboard", getMainArr[i]);
+
+            dashboardTarget.innerHTML +=
+                `
+        <div class="user_detail">   
+                                <div class="sub_user"><h2>${getMainArr[i].id}</h2></div>
+                                <div class="sub_user"><h2>${getMainArr[i].namee}</h2></div>
+                                <div class="sub_user"><h2 class="${getMainArr[i].statuss}">${getMainArr[i].statuss}</h2></div>
+                                <div class="sub_user"><h2>${getMainArr[i].phone_number}</h2></div>
+                                <div class="sub_user"><button>View Profile</button></div>
+        </div>
+                 `
+        }
+
+        const signinDirect = ()=>{
+            localStorage.clear();
+            window.location.href = "./index.html";
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,298 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main_sign,
+.main_log {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_sign .signin,
+.main_log .login {
+    margin-top: 55px;
+    border: 2px solid gray;
+    width: 60%;
+    height: auto;
+    background-color: whitesmoke;
+}
+
+.main_sign .signin .mini_head,
+.main_log .login .mini_head {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_sign .signin .mini_input,
+.main_log .login .mini_input {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.signin .mini_head h1,
+.login .mini_head h1 {
+    font-size: 38px;
+    font-weight: 100;
+    text-decoration: underline aqua;
+}
+
+.signin .mini_input input,
+.login .mini_input input {
+    width: 65%;
+    height: 45px;
+    margin-right: 15px;
+}
+
+.signin .mini_input input:placeholder-shown,
+.login .mini_input input:placeholder-shown {
+    text-align: center;
+}
+
+.signin .mini_input label,
+.login .mini_input label {
+    font-size: 20px;
+    margin-left: 15px;
+}
+
+.main_sign .mini_checkbox {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.main_sign .mini_checkbox p {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+.main_sign .mini_checkbox input {
+    width: 20px;
+    height: 20px;
+    border: 2px solid blue;
+    margin: 15px 15px 15px 15px;
+}
+
+.main_sign .mini_button,
+.main_log .mini_button {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.main_sign .mini_button button,
+.main_log .mini_button button {
+    width: 150px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: 100;
+}
+
+.main_sign .mini_button p,
+.main_log .mini_button p {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+.main_sign .mini_button p a,
+.main_log .mini_button p a {
+
+    text-decoration: underline black;
+    color: black;
+}
+
+/* .main_log .dashboard_button{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_log .dashboard_button button{
+    width: 250px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: 100;
+    color: black;
+} */
+
+/* .main_log .dashboard_button button a{
+    text-decoration: none;
+} */
+
+/* .main_log .dashboard_button .hidden{
+    display: none;
+}
+
+.main_log .dashboard_button .view{
+    display: block;
+} */
+
+.dash {
+    width: 100%;
+    height: auto;
+}
+
+.dash .nav,
+.dash .intro {
+    width: 100%;
+    height: 70px;
+    border-bottom: 2px solid gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dash .nav h1,
+.dash .intro h1 {
+    font-size: 38px;
+    text-decoration: underline aqua;
+}
+
+.dash .main_dash {
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+.main_dash .left {
+    width: 20%;
+    height: auto;
+}
+
+.main_dash .left .side_button {
+    width: 100%;
+    height: 70px;
+    border: 2px solid #03346E;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_dash .left .side_button button {
+    width: 60%;
+    height: 50px;
+    border: 5px solid #6EACDA;
+    border-radius: 15px;
+    background-color: #021526;
+    color: #E2E2B6;
+}
+
+.main_dash .right {
+    width: 80%;
+    height: auto;
+    border-left: 2px solid #021526;
+}
+
+.main_dash .right .header {
+    width: 100%;
+    height: 70px;
+    display: flex;
+}
+
+.main_dash .right .header .sub_head {
+    width: 20%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #6EACDA;
+    border-bottom: 2px solid #021526;
+}
+
+.main_dash .right .header .sub_head h2 {
+    color: #E2E2B6;
+}
+
+.main_dash .right .user_detail {
+    width: 100%;
+    height: 70px;
+    display: flex;
+}
+
+.main_dash .right .user_detail .sub_user {
+    width: 20%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid #021526;
+}
+
+.main_dash .right .user_detail .sub_user h2 {
+    font-size: 22px;
+    font-weight: 100;
+    color: #03346E;
+}
+
+.main_dash .right .user_detail .sub_user button {
+    width: 70%;
+    height: 50px;
+    border: 2px solid gray;
+    background-color: whitesmoke;
+    font-size: 16px;
+    border-radius: 10px;
+    color: #03346E;
+}
+
+.main_dash .right .user_detail .sub_user .employee {
+    width: 50%;
+    height: 50px;
+    border: 2px solid #00FF9C;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00FF9C;
+    color: white;
+}
+
+.main_dash .right .user_detail .sub_user .admin {
+    width: 50%;
+    height: 50px;
+    border: 2px solid #4CC9FE;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4CC9FE;
+    color: white;
+}
+
+.main_dash .right .user_detail .sub_user .superAdmin {
+    width: 50%;
+    height: 50px;
+    border: 2px solid #FF0000;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FF0000;
+    color: white;
+}
